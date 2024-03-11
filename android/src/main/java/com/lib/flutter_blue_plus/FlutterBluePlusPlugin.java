@@ -192,32 +192,32 @@ public class FlutterBluePlusPlugin implements
     @Override
     public void onDetachedFromEngine(@NonNull FlutterPluginBinding binding)
     {
-        log(LogLevel.DEBUG, "onDetachedFromEngine");
-
-        invokeMethodUIThread("OnDetachedFromEngine", new HashMap<>());
-
-        pluginBinding = null;
-
-        // stop scanning
-        if (mBluetoothAdapter != null && mIsScanning) {
-            BluetoothLeScanner scanner = mBluetoothAdapter.getBluetoothLeScanner();
-            if (scanner != null) {
-                scanner.stopScan(getScanCallback());
-                mIsScanning = false;
-            }
-        }
-
-        disconnectAllDevices("onDetachedFromEngine");
-
-        context.unregisterReceiver(mBluetoothBondStateReceiver);
-        context.unregisterReceiver(mBluetoothAdapterStateReceiver);
-        context = null;
-
-        methodChannel.setMethodCallHandler(null);
-        methodChannel = null;
-
-        mBluetoothAdapter = null;
-        mBluetoothManager = null;
+//        log(LogLevel.DEBUG, "onDetachedFromEngine");
+//
+//        invokeMethodUIThread("OnDetachedFromEngine", new HashMap<>());
+//
+//        pluginBinding = null;
+//
+//        // stop scanning
+//        if (mBluetoothAdapter != null && mIsScanning) {
+//            BluetoothLeScanner scanner = mBluetoothAdapter.getBluetoothLeScanner();
+//            if (scanner != null) {
+//                scanner.stopScan(getScanCallback());
+//                mIsScanning = false;
+//            }
+//        }
+//
+//        disconnectAllDevices("onDetachedFromEngine");
+//
+//        context.unregisterReceiver(mBluetoothBondStateReceiver);
+//        context.unregisterReceiver(mBluetoothAdapterStateReceiver);
+//        context = null;
+//
+//        methodChannel.setMethodCallHandler(null);
+//        methodChannel = null;
+//
+//        mBluetoothAdapter = null;
+//        mBluetoothManager = null;
     }
 
     @Override
@@ -232,8 +232,8 @@ public class FlutterBluePlusPlugin implements
     @Override
     public void onDetachedFromActivityForConfigChanges()
     {
-        log(LogLevel.DEBUG, "onDetachedFromActivityForConfigChanges");
-        onDetachedFromActivity();
+//        log(LogLevel.DEBUG, "onDetachedFromActivityForConfigChanges");
+//        onDetachedFromActivity();
     }
 
     @Override
@@ -246,9 +246,9 @@ public class FlutterBluePlusPlugin implements
     @Override
     public void onDetachedFromActivity()
     {
-        log(LogLevel.DEBUG, "onDetachedFromActivity");
-        activityBinding.removeRequestPermissionsResultListener(this);
-        activityBinding = null;
+//        log(LogLevel.DEBUG, "onDetachedFromActivity");
+//        activityBinding.removeRequestPermissionsResultListener(this);
+//        activityBinding = null;
     }
 
     ////////////////////////////////////////////////////////////
