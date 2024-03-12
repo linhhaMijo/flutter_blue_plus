@@ -309,7 +309,7 @@ public class FlutterBluePlusPlugin implements
                         mIsScanning = false;
                     }
 
-                    disconnectAllDevices("flutterHotRestart");
+//                    disconnectAllDevices("flutterHotRestart");
 
                     log(LogLevel.DEBUG, "connectedPeripherals: " + mConnectedDevices.size());
 
